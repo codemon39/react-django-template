@@ -1,9 +1,9 @@
 from rest_framework import viewsets
 
-from backend.api.serializers import IdeaSerializer
-from backend.models import Idea
+from backend.api.serializers import ProductSerializer
+from backend.models import Product
 
 
-class IdeaViewSet(viewsets.ModelViewSet):
-    queryset = Idea.objects.all()
-    serializer_class = IdeaSerializer
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer

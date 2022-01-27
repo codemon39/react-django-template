@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from backend.models import Idea
+from backend.models import Product
 
 
-class IdeaSerializer(serializers.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Idea
+        model = Product
         fields = '__all__'
