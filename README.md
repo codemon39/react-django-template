@@ -1,4 +1,6 @@
-# interview_app
+# django-react 
+
+Sample django and react application.
 
 - A basic `app/` set up with Django settings and `urls.py`.
 - A `backend/` with
