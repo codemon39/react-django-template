@@ -10,7 +10,7 @@ def forwards_func(apps, schema_editor):
         [
             Product(
                 name=f"Product {i}",
-                image="https://bulma.io/images/placeholders/480x800.png",
+                image="https://bulma.io/images/placeholders/480x480.png",
                 price=i * 10,
             )
             for i in range(6)
