@@ -11,6 +11,10 @@ const Error = ({ classes, error }) => {
     <Snackbar
       open={open}
       className={classes.snackbar}
+      anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+      }}
       message={error.message}
       action={
         <Button

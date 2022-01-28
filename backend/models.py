@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Product(models.Model):
@@ -6,12 +7,11 @@ class Product(models.Model):
     image = models.URLField()
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    archived = models.BooleanField(default=False)
+    archived = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.name
 
     def delete(self, using=None, keep_parents=False):
-        if not self.archived:
-            self.archived = True
-            self.save(using=using)
+        self.archived = timezone.now()
+        self.save(using=using)

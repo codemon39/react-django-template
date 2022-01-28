@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('image', models.URLField()),
                 ('description', models.TextField()),
                 ('price', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('archived', models.BooleanField(default=False)),
+                ('archived', models.DateTimeField(null=True, blank=True)),
             ],
         ),
     ]

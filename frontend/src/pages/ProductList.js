@@ -2,7 +2,7 @@ import React from 'react';
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import {useProduct} from "../providers/ProductProvider";
-import {Error} from "@material-ui/icons";
+import Error from "../components/Error";
 import Loading from "../components/Loading";
 import Product from "../components/Product";
 import {Grid} from "@material-ui/core";
