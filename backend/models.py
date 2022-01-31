@@ -13,5 +13,6 @@ class Product(models.Model):
         return self.name
 
     def delete(self, using=None, keep_parents=False):
-        self.archived = timezone.now()
-        self.save(using=using)
+        if not self.archived:
+            self.archived = timezone.now()
+            self.save(using=using)
